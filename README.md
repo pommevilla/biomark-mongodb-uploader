@@ -1,6 +1,6 @@
-# GERMS BLASTER
+# GERMS Biomark MongoDB Uploader
 
-Upload BLAST results to our database so that you can interact with them on the dashboard.
+This pipeline uploads Biomark readings and associated metadata to the GERMS MongoDB.
 
 ## Getting started
 
@@ -27,13 +27,3 @@ This script will upload files to the `all_biomark_data` database of the GERMS mo
 * `run_data` contains the actual data from the `biomark_run`. This contains the actual row data from the processed biomark data. 
 
 The two databases are related by the dataset name field.
-
-## Planned features
-
-## Random notes
-
-### To drop all files in the blast_results collection using MongoDB Compass
-
-1. Connect to the database using MongoDB Compass
-2. In mongosh, type `use blast_results` > `db.all_blast_results` to set  `all_blast_results` as the working collection
-3. Enter `db.dropDatabase()` to remove all of the entries in the `all_blast_results` database.
